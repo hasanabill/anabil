@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import HackerRoom from "../components/HackerRoom";
 import { Suspense } from "react";
 import CanvasLoader from "../components/CanvasLoader";
-// import { Leva, useControls } from "leva";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import Target from "../components/Target";
@@ -12,44 +11,6 @@ import Cube from "../components/Cube";
 import Rings from "../components/Rings";
 
 const Hero = () => {
-  // const controls = useControls("HackerRoom", {
-  //   positionX: {
-  //     value: 2.5,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   positionY: {
-  //     value: 0.2,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   positionZ: {
-  //     value: 0.7,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   scale: {
-  //     value: 0.06,
-  //     min: 0.01,
-  //     max: 1,
-  //   },
-  //   rotationX: {
-  //     value: 0.01,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   rotationY: {
-  //     value: 0.01,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   rotationZ: {
-  //     value: 0.01,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  // });
-
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
@@ -68,7 +29,6 @@ const Hero = () => {
       </div>
 
       <div className="w-full h-full absolute inset-0">
-        {/* <Leva /> */}
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 20]} />
@@ -76,17 +36,6 @@ const Hero = () => {
               scale={sizes.deskScale}
               position={sizes.deskPosition}
               rotation={[0.2, -Math.PI, 0]}
-              // position={[
-              //   controls.positionX,
-              //   controls.positionY,
-              //   controls.positionZ,
-              // ]}
-              // rotation={[
-              //   controls.rotationX,
-              //   controls.rotationY,
-              //   controls.rotationZ,
-              // ]}
-              // scale={[controls.scale, controls.scale, controls.scale]}
             />
 
             <group>
