@@ -2,50 +2,89 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden rounded-2xl bg-neutral-950/40 backdrop-blur-xs">
-      <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center gap-4 px-6 py-16 text-center">
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 backdrop-blur-sm border border-neutral-800 shadow-[0_0_40px_rgba(0,0,0,0.4)]">
+      {/* Decorative glow */}
+      <div className="absolute -top-20 -left-20 h-96 w-96 bg-sky-500/10 rounded-full blur-3xl" />
+      <div className="absolute -bottom-20 -right-20 h-96 w-96 bg-purple-500/10 rounded-full blur-3xl" />
+
+      <motion.div
+        className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-6 py-20 text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+      >
+        {/* Name */}
         <motion.h1
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="bg-gradient-to-b from-white to-neutral-400 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-6xl"
+          variants={itemVariants}
+          className="bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-6xl"
         >
           Mahmudul Hasan Anabil
         </motion.h1>
+
+        {/* Role */}
+        <motion.h2
+          variants={itemVariants}
+          className="mt-3 text-lg sm:text-xl text-sky-200 font-medium"
+        >
+          Full-Stack Web Developer | AI & IoT Enthusiast
+        </motion.h2>
+
+        {/* Location & Email */}
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-          className="text-base text-neutral-400"
+          variants={itemVariants}
+          className="mt-1 text-neutral-400 text-sm sm:text-base"
         >
-          Dhaka, Bangladesh
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-          className="flex flex-col items-center gap-1"
-        >
+          Dhaka, Bangladesh ·{" "}
           <a
             href="mailto:anabil1310@gmail.com"
             className="text-sky-400 hover:text-sky-300"
           >
             anabil1310@gmail.com
           </a>
-        </motion.div>
+        </motion.p>
+
+        {/* Short description */}
+        <motion.p
+          variants={itemVariants}
+          className="mt-5 max-w-2xl text-neutral-300 text-sm sm:text-base leading-relaxed"
+        >
+          I’m a motivated BSc Computing student specializing in{" "}
+          <span className="text-white font-medium">
+            React.js, Node.js, MongoDB, and Express.js
+          </span>
+          . With experience building innovative web platforms, competing in
+          global hackathons, and exploring AI-driven IoT solutions, I aim to
+          craft impactful digital experiences that push the boundaries of
+          technology.
+        </motion.p>
+
+        {/* Action buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-          className="mt-3 flex flex-wrap items-center justify-center gap-3"
+          variants={itemVariants}
+          className="mt-6 flex flex-wrap items-center justify-center gap-4"
         >
           <a
             href="https://linkedin.com/in/mahmudulhasananabil"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-neutral-800/60 bg-neutral-900 px-4 py-2 text-sm text-neutral-200 transition-colors hover:border-neutral-700 hover:bg-neutral-800"
+            className="rounded-full border border-sky-500 bg-sky-500/10 px-5 py-2 text-sm text-sky-300 transition-all hover:bg-sky-500/20 hover:border-sky-400"
           >
             LinkedIn
           </a>
@@ -53,12 +92,18 @@ const Hero = () => {
             href="https://github.com/hasanabill"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-neutral-800/60 bg-neutral-900 px-4 py-2 text-sm text-neutral-200 transition-colors hover:border-neutral-700 hover:bg-neutral-800"
+            className="rounded-full border border-purple-500 bg-purple-500/10 px-5 py-2 text-sm text-purple-300 transition-all hover:bg-purple-500/20 hover:border-purple-400"
           >
             GitHub
           </a>
+          <a
+            href="#projects"
+            className="rounded-full border border-neutral-700 bg-neutral-800 px-5 py-2 text-sm text-neutral-200 transition-all hover:bg-neutral-700"
+          >
+            View My Projects
+          </a>
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };
