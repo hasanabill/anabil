@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Mahmudul Hasan Anabil",
-  description: "Mahmudul Hasan Anabi",
+  description: "Mahmudul Hasan Anabil",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-sky-500/20 selection:text-sky-200`}
       >
         {children}
       </body>

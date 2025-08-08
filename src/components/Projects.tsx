@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import AnimatedSection from "@/components/ui/AnimatedSection";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -48,25 +51,33 @@ const projects = [
 ];
 
 const Projects = () => (
-  <section className="my-8">
-    <h2 className="text-2xl font-semibold mb-2">Projects</h2>
-    <div className="space-y-6">
+  <AnimatedSection className="my-16">
+    <h2 className="mb-6 text-3xl font-semibold tracking-tight">Projects</h2>
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
       {projects.map((project, idx) => (
-        <div key={idx} className="border-b pb-4">
-          <h3 className="text-xl font-bold">{project.title}</h3>
-          <p className="text-sm text-gray-500">{project.date}</p>
-          <p>{project.description}</p>
-          <p>
-            <span className="font-medium">Features:</span> {project.features}
+        <motion.div
+          key={project.title}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: idx * 0.05 }}
+          className="rounded-xl border border-neutral-800/60 bg-neutral-900/40 p-5 hover:border-neutral-700/80 hover:bg-neutral-900/60"
+        >
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="text-xl font-bold text-neutral-100">{project.title}</h3>
+            <span className="shrink-0 text-xs text-neutral-400">{project.date}</span>
+          </div>
+          <p className="mt-2 text-sm text-neutral-300">{project.description}</p>
+          <p className="mt-3 text-sm text-neutral-400">
+            <span className="font-medium text-neutral-300">Features:</span> {project.features}
           </p>
-          <p>
-            <span className="font-medium">Technologies:</span>{" "}
-            {project.technologies}
+          <p className="mt-1 text-sm text-neutral-400">
+            <span className="font-medium text-neutral-300">Technologies:</span> {project.technologies}
           </p>
-        </div>
+        </motion.div>
       ))}
     </div>
-  </section>
+  </AnimatedSection>
 );
 
 export default Projects;

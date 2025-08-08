@@ -1,22 +1,24 @@
+"use client";
 import React from "react";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const achievements = [
-  "Fun With Code programming contest — 2nd place",
-  "NASA Space App Challenge Hackathon – Selected for In-Person Competition",
-  "Code Samurai – Finalist",
-  "International Collegiate Programming Contest (ICPC) – Participant",
-  "Standup Hackathon – Top 10",
+  "Fun With Code programming contest - 2nd place",
+  "NASA Space App Challenge Hackathon - Selected for In-Person Competition",
+  "Code Samurai - Finalist",
+  "International Collegiate Programming Contest (ICPC) - Participant",
+  "Standup Hackathon - Top 10",
 ];
 
 const Achievements = () => (
-  <section className="my-8">
-    <h2 className="text-2xl font-semibold mb-2">Competitions & Achievements</h2>
-    <ul className="list-disc ml-5">
-      {achievements.map((item, idx) => (
-        <li key={idx}>{item}</li>
+  <AnimatedSection className="my-16">
+    <h2 className="mb-4 text-3xl font-semibold tracking-tight">Competitions & Achievements</h2>
+    <ul className="ml-5 list-disc text-neutral-300">
+      {achievements.map((item) => (
+        <li key={item}>{item}</li>
       ))}
     </ul>
-  </section>
+  </AnimatedSection>
 );
 
 export default Achievements;

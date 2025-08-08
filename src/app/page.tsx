@@ -6,7 +6,8 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Achievements from "@/components/Achievements";
 import Hobbies from "@/components/Hobbies";
-import { GridBackground } from "@/ui/GridBackground";
+import { GridBackground } from "@/components/ui/GridBackground";
+import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <GridBackground>
         <Hero />
       </GridBackground>
-      <section className="max-w-3xl mx-auto px-4">
+      <main className="mx-auto max-w-5xl px-4">
         <About />
         <Education />
         <Skills />
@@ -22,7 +23,11 @@ export default function Home() {
         <Experience />
         <Achievements />
         <Hobbies />
-      </section>
+        <AnimatedSection className="my-24 text-center text-xs text-neutral-500">
+          © {new Date().getFullYear()} Mahmudul Hasan Anabil. All rights
+          reserved.
+        </AnimatedSection>
+      </main>
     </>
   );
 }
