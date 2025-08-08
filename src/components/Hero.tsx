@@ -71,15 +71,9 @@ const Hero = () => {
           variants={itemVariants}
           className="mt-5 max-w-2xl text-neutral-300 text-sm sm:text-base leading-relaxed"
         >
-          Alhamdulillah, Allah has blessed me with the knowledge and ability to
-          work with modern web technologies like{" "}
-          <span className="font-medium text-sky-200">
-            React.js, Node.js, MongoDB, and Express.js
-          </span>
-          . Through His guidance, I’ve been able to build impactful web
-          platforms, participate in global hackathons, and explore AI-driven IoT
-          solutions that strive to benefit people and push the boundaries of
-          technology.
+          Alhamdulillah, Allah has blessed me with the skills to craft modern,
+          impactful digital solutions. I build full-stack applications, explore
+          AI & IoT, and strive to use technology for positive change.
         </motion.p>
 
         {/* Action buttons */}
