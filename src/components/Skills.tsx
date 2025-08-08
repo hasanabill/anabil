@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { GlowingEffect } from "@/components/ui/glowing-border";
 import {
   FaCode,
   FaLaptopCode,
@@ -13,7 +14,7 @@ import {
 
 const skillsData = [
   {
-    icon: <FaCode className="text-sky-400 text-xl" />,
+    icon: <FaCode className="text-sky-400 text-lg" />,
     title: "Programming Languages",
     items: [
       "C",
@@ -27,7 +28,7 @@ const skillsData = [
     ],
   },
   {
-    icon: <FaLaptopCode className="text-purple-400 text-xl" />,
+    icon: <FaLaptopCode className="text-purple-400 text-lg" />,
     title: "Frontend Development",
     items: [
       "React.js",
@@ -39,7 +40,7 @@ const skillsData = [
     ],
   },
   {
-    icon: <FaServer className="text-green-400 text-xl" />,
+    icon: <FaServer className="text-green-400 text-lg" />,
     title: "Backend Development",
     items: [
       "Node.js",
@@ -51,22 +52,22 @@ const skillsData = [
     ],
   },
   {
-    icon: <FaPaintBrush className="text-pink-400 text-xl" />,
+    icon: <FaPaintBrush className="text-pink-400 text-lg" />,
     title: "Creative Tools",
     items: ["Adobe Photoshop", "Lightroom", "Premiere Pro", "Illustrator"],
   },
   {
-    icon: <FaTools className="text-yellow-400 text-xl" />,
+    icon: <FaTools className="text-yellow-400 text-lg" />,
     title: "Development Tools",
     items: ["Git", "GitHub", "Figma", "Docker"],
   },
   {
-    icon: <FaLinux className="text-orange-400 text-xl" />,
+    icon: <FaLinux className="text-orange-400 text-lg" />,
     title: "Operating Systems",
     items: ["Arch Linux", "Windows"],
   },
   {
-    icon: <FaLanguage className="text-red-400 text-xl" />,
+    icon: <FaLanguage className="text-red-400 text-lg" />,
     title: "Languages",
     items: ["Bangla (Native)", "English (Proficient)", "Arabic (Learning)"],
   },
@@ -78,32 +79,57 @@ const Skills = () => (
       Technical Skills
     </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {skillsData.map((category, index) => (
-        <div
+    <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {skillsData.map((skill, index) => (
+        <SkillCard
           key={index}
-          className="rounded-xl border border-neutral-800/60 bg-neutral-900/40 p-5 hover:border-sky-500/40 hover:shadow-lg hover:shadow-sky-500/10 transition-all duration-300"
-        >
-          <div className="flex items-center gap-3 mb-3">
-            {category.icon}
-            <h3 className="text-lg font-semibold text-white">
-              {category.title}
-            </h3>
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {category.items.map((skill, i) => (
-              <span
-                key={i}
-                className="px-3 py-1 text-sm rounded-full bg-neutral-800/60 border border-neutral-700 text-neutral-300 hover:bg-sky-500/10 hover:text-sky-300 transition-colors duration-200"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+          icon={skill.icon}
+          title={skill.title}
+          items={skill.items}
+        />
       ))}
-    </div>
+    </ul>
   </AnimatedSection>
+);
+
+const SkillCard = ({
+  icon,
+  title,
+  items,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  items: string[];
+}) => (
+  <li className="min-h-[14rem] list-none">
+    <div className="relative h-full rounded-2xl border border-neutral-800/60 p-2 md:rounded-3xl md:p-3">
+      <GlowingEffect
+        spread={40}
+        glow={true}
+        disabled={false}
+        proximity={64}
+        inactiveZone={0.01}
+      />
+      <div className="relative flex h-full flex-col gap-4 overflow-hidden rounded-xl p-6 bg-neutral-900/40 backdrop-blur-md">
+        <div className="flex items-center gap-3">
+          <div className="w-fit rounded-lg border border-neutral-700 p-2">
+            {icon}
+          </div>
+          <h3 className="text-lg font-semibold text-white">{title}</h3>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {items.map((skill, i) => (
+            <span
+              key={i}
+              className="px-3 py-1 text-sm rounded-full bg-neutral-800/60 border border-neutral-700 text-neutral-300 hover:bg-sky-500/10 hover:text-sky-300 transition-colors duration-200"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </li>
 );
 
 export default Skills;
