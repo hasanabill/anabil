@@ -33,6 +33,12 @@ const Hero = () => {
         {/* Name */}
         <motion.h1
           variants={itemVariants}
+          className="bg-gradient-to-b mb-5 from-white via-neutral-200 to-neutral-500 bg-clip-text text-xl md:text-3xl font-extrabold tracking-tight text-transparent "
+        >
+          لا إله إلا الله محمد رسول الله
+        </motion.h1>
+        <motion.h1
+          variants={itemVariants}
           className="bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-4xl font-extrabold tracking-tight text-transparent sm:text-6xl"
         >
           Mahmudul Hasan Anabil
@@ -65,13 +71,14 @@ const Hero = () => {
           variants={itemVariants}
           className="mt-5 max-w-2xl text-neutral-300 text-sm sm:text-base leading-relaxed"
         >
-          I’m a motivated BSc Computing student specializing in{" "}
-          <span className="text-white font-medium">
+          Alhamdulillah, Allah has blessed me with the knowledge and ability to
+          work with modern web technologies like{" "}
+          <span className="font-medium text-sky-200">
             React.js, Node.js, MongoDB, and Express.js
           </span>
-          . With experience building innovative web platforms, competing in
-          global hackathons, and exploring AI-driven IoT solutions, I aim to
-          craft impactful digital experiences that push the boundaries of
+          . Through His guidance, I’ve been able to build impactful web
+          platforms, participate in global hackathons, and explore AI-driven IoT
+          solutions that strive to benefit people and push the boundaries of
           technology.
         </motion.p>
 
