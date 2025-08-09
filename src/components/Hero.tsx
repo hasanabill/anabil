@@ -21,8 +21,8 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950 backdrop-blur-sm border border-neutral-800 shadow-[0_0_40px_rgba(0,0,0,0.4)]">
       {/* Decorative glow */}
-      <div className="absolute -top-20 -left-20 h-96 w-96 bg-sky-500/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 -right-20 h-96 w-96 bg-purple-500/10 rounded-full blur-3xl" />
+      <div className="absolute -top-20 -left-20 h-96 w-96 bg-sky-400/10 rounded-full blur-3xl" />
+      <div className="absolute -bottom-20 -right-20 h-96 w-96 bg-primary/10 bg-e rounded-full blur-3xl" />
 
       <motion.div
         className="relative z-10 mx-auto flex max-w-5xl flex-col items-center justify-center px-6 py-20 text-center"
@@ -47,7 +47,7 @@ const Hero = () => {
         {/* Role */}
         <motion.h2
           variants={itemVariants}
-          className="mt-3 text-lg sm:text-xl text-sky-200 font-medium"
+          className="mt-3 text-lg sm:text-xl text-[#b4ffe0] font-medium"
         >
           Full-Stack Web Developer | AI & IoT Enthusiast
         </motion.h2>
@@ -69,7 +69,7 @@ const Hero = () => {
         {/* Short description */}
         <motion.p
           variants={itemVariants}
-          className="mt-5 max-w-2xl text-neutral-300 text-sm sm:text-base leading-relaxed"
+          className="mt-5 max-w-2xl tracking-tight text-neutral-300 text-justify text-sm sm:text-base "
         >
           Alhamdulillah, Allah has blessed me with the skills to craft modern,
           impactful digital solutions. I build full-stack applications, explore
