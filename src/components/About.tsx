@@ -3,7 +3,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 
 const About = () => (
   <AnimatedSection className="my-20">
-    <h2 className="mb-6 text-3xl font-bold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
+    <h2 className="mb-6 text-3xl font-bold tracking-tight text-primary">
       About Me
     </h2>
     <p className="max-w-3xl text-neutral-300 leading-relaxed text-justify">
@@ -11,7 +11,7 @@ const About = () => (
       pursue my passion for technology. I am a motivated full-stack web
       developer currently in my 8th semester of a BSc in Computing and
       Information Systems at Daffodil International University, specializing in{" "}
-      <span className="text-sky-200 font-medium">
+      <span className="text-primary/90 font-medium">
         React.js, Node.js, MongoDB, and Express.js
       </span>
       .

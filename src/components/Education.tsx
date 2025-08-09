@@ -5,7 +5,7 @@ import { FaGraduationCap } from "react-icons/fa";
 
 const Education = () => (
   <AnimatedSection className="my-20">
-    <h2 className="mb-6 text-3xl font-bold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
+    <h2 className="mb-6 text-3xl font-bold tracking-tight text-primary">
       Education
     </h2>
 
@@ -17,10 +17,10 @@ const Education = () => (
 
       <p className="text-lg font-semibold text-white">
         BSc in Computing and Information Systems{" "}
-        <span className="text-sky-300">(AI in IoT)</span>
+        <span className="text-primary">(AI in IoT)</span>
       </p>
       <p className="text-neutral-400 mt-1">
-        Daffodil International University – Dhaka, Bangladesh
+        Daffodil International University - Dhaka, Bangladesh
       </p>
 
       <div className="mt-3 flex flex-wrap gap-4 text-sm text-neutral-300">

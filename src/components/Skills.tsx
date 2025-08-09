@@ -75,7 +75,7 @@ const skillsData = [
 
 const Skills = () => (
   <AnimatedSection className="my-20">
-    <h2 className="mb-8 text-3xl font-bold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
+    <h2 className="mb-8 text-3xl font-bold tracking-tight text-primary">
       Technical Skills
     </h2>
 
