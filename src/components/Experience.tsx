@@ -24,7 +24,7 @@ const experiences: ExperienceItem[] = [
     role: "Treasurer",
     organisation: "DIU Computer & Information Science Club",
     location: "Dhaka, Bangladesh",
-    period: "October 2024 – Present",
+    period: "October 2024 – November 2025",
     summary:
       "Steering finances and event strategy for a 150+ member student community focused on AI, IoT, and emerging tech.",
     contributions: [
