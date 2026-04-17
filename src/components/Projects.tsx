@@ -14,73 +14,107 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Vector Power",
-    date: "March 2025",
+    title: "CareScape",
+    date: "January 2026",
     description:
-      "A modern, responsive website for a renewable energy company with strong emphasis on storytelling and conversions.",
+      "Built a full-stack, role-based digital healthcare platform with dedicated experiences for patients, doctors, and administrators.",
     highlights: [
-      "Immersive 3D animations, parallax storytelling, and scroll-triggered reveals.",
-      "Lead capture contact form integrated with automated email notifications.",
-      "Content strategy aligned with sustainability goals and brand messaging.",
+      "AI-powered symptom intake and triage with guided user flows.",
+      "Doctor recommendation, booking flow, and appointment management.",
+      "E-prescriptions, clinical note drafting, profile dashboards, and audit-ready admin analytics.",
     ],
     technologies: [
       "Next.js",
-      "React",
+      "React.js",
+      "TypeScript",
       "Tailwind CSS",
+      "NextAuth",
+      "MongoDB",
+      "Mongoose",
+      "OpenAI API",
+      "Zod",
+    ],
+  },
+  {
+    title: "Vector Power",
+    date: "March 2025",
+    description:
+      "Developed a modern, responsive website for a leading renewable energy company in Bangladesh.",
+    highlights: [
+      "3D animations and advanced scroll effects for engaging storytelling.",
+      "Contact form integration for streamlined lead capture.",
+      "Sustainability-focused content aligned with brand direction.",
+    ],
+    technologies: [
+      "Next.js",
+      "React.js",
+      "TailwindCSS",
       "Framer Motion",
       "GSAP",
-      "Spline",
       "EmailJS",
+      "Spline",
       "Lenis",
+      "SplitType",
     ],
   },
   {
-    title: "AI Project Competition Platform",
-    date: "Nov 2024 – Dec 2024",
+    title: "AI Project Competition 2024",
+    date: "November 2024 - December 2024",
     description:
-      "Competition portal for Daffodil International University to streamline AI project submissions and jury workflows.",
+      "Developing a platform for Daffodil International University to manage AI project proposals for a competition.",
     highlights: [
-      "Team onboarding with eligibility validation and member management.",
-      "Live dashboard for jury review, verification, and event announcements.",
-      "Optimised admin tooling to track submissions and broadcast updates.",
+      "Team registration and competition details management.",
+      "Dashboard to display and verify team information.",
+      "Structured experience for proposal intake and admin oversight.",
     ],
-    technologies: ["Vite", "React", "Node.js", "Express.js", "MySQL", "Tailwind CSS"],
+    technologies: [
+      "Vite",
+      "React.js",
+      "NodeJS",
+      "ExpressJS",
+      "MySQL",
+      "Tailwind",
+    ],
   },
   {
-    title: "Chinta — Govt & Citizen Forum",
-    date: "October 2024",
+    title: "Chinta - Community Social Forum",
+    date: "October 2024 – April 2026",
     description:
-      "Civic engagement platform connecting citizens with ministries through structured, impactful dialogue.",
+      "Built a full-stack social discussion platform for community-driven conversations, featuring user profiles, follow system, threaded replies, and real-time direct messaging.",
     highlights: [
-      "National ID-based authentication and identity verification.",
-      "Structured templates that guide policy proposals and problem statements.",
-      "Community voting, cooldown systems, and moderation tooling for healthy debates.",
+      "JWT authentication with modern sign-in/sign-up flows and profile editing.",
+      "Category/tag-based forum navigation with upvote/downvote interactions.",
+      "Conversation-scoped Socket.IO events for real-time messaging.",
     ],
-    technologies: ["Vite", "React", "Node.js", "Express.js", "MongoDB", "Mongoose"],
-  },
-  {
-    title: "Items & Ideas",
-    date: "June 2024",
-    description:
-      "Amazon-affiliated e-commerce experience tailored for an Upwork client, focused on conversion and trust.",
-    highlights: [
-      "Secure merchant dashboard for catalog curation and product lifecycle management.",
-      "SEO-friendly product storytelling with dynamic cross-selling sections.",
-      "Modular architecture enabling rapid experimentation with offer layouts.",
+    technologies: [
+      "Vite",
+      "React",
+      "Node.js",
+      "Express.js",
+      "Socket.IO",
+      "MongoDB",
+      "Mongoose",
+      "JWT",
+      "Tailwind CSS",
     ],
-    technologies: ["Vite", "React", "Node.js", "Express.js", "MongoDB"],
   },
   {
     title: "Shounen Manufacturer",
     date: "April 2022",
     description:
-      "Full-stack application powering sales, inventory, and customer communications for a wholesale factory.",
+      "Developed a full-stack wholesale manufacturing web application with secure authentication, role-based admin access, and product/order management workflows.",
     highlights: [
-      "Role-based admin workspace with audit trails and activity logs.",
-      "Authentication, password reset, and granular access controls.",
-      "Data visualisations for order trends and production planning.",
+      "Built and integrated core backend services for user, inventory, cart, and review operations.",
+      "Implemented frontend modules using React.js and React Query.",
+      "Improved maintainability by modularizing server architecture and centralizing API configuration with robust client-side error handling.",
     ],
-    technologies: ["React", "Node.js", "Express.js", "MongoDB", "Firebase"],
+    technologies: [
+      "React.js",
+      "React Query",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+    ],
   },
 ];
 
@@ -96,8 +130,8 @@ const Projects = () => (
         </h2>
       </div>
       <p className="max-w-xl text-sm text-neutral-400">
-        High-impact builds crafted end-to-end, from discovery and system design to polished UI
-        engineering and launch support.
+        High-impact builds crafted end-to-end, from discovery and system design
+        to polished UI engineering and launch support.
       </p>
     </div>
     <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">

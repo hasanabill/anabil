@@ -3,10 +3,14 @@ import React from "react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { motion } from "framer-motion";
 import {
+  FaBook,
   FaChessKnight,
+  FaGlobe,
+  FaLandmark,
   FaRobot,
   FaSatelliteDish,
   FaShieldAlt,
+  FaStarAndCrescent,
   FaTools,
   FaNewspaper,
 } from "react-icons/fa";
@@ -48,18 +52,32 @@ const hobbies: Hobby[] = [
     icon: <FaShieldAlt className="text-lg text-rose-400" />,
   },
   {
-    title: "Personal Product Sprints",
+    title: "Islamic Learning",
     description:
-      "Shipping micro-projects end-to-end to test hypotheses, user flows, and technical stacks in real life.",
-    pillar: "Execution",
-    icon: <FaTools className="text-lg text-amber-400" />,
+      "Studying Islamic knowledge to strengthen faith, character, and discipline in both life and work.",
+    pillar: "Faith",
+    icon: <FaStarAndCrescent className="text-lg text-emerald-400" />,
   },
   {
-    title: "Tech Trend Spotting",
+    title: "Philosophy",
     description:
-      "Synthesising insights from newsletters, podcasts, and conferences to anticipate what's next in tech.",
-    pillar: "Learning",
-    icon: <FaNewspaper className="text-lg text-fuchsia-400" />,
+      "Exploring ideas around ethics, reasoning, and meaning to develop clearer thinking and better judgment.",
+    pillar: "Reflection",
+    icon: <FaBook className="text-lg text-violet-400" />,
+  },
+  {
+    title: "History",
+    description:
+      "Reading historical narratives to understand how societies evolve through leadership, conflict, and change.",
+    pillar: "Perspective",
+    icon: <FaLandmark className="text-lg text-amber-400" />,
+  },
+  {
+    title: "World Civilizations",
+    description:
+      "Learning how civilizations rise, interact, and influence culture, science, governance, and identity.",
+    pillar: "Culture",
+    icon: <FaGlobe className="text-lg text-sky-400" />,
   },
 ];
 
@@ -75,8 +93,8 @@ const Hobbies = () => (
         </h2>
       </div>
       <p className="max-w-xl text-sm text-neutral-400">
-        Curiosity fuels everything I build. These pursuits keep me experimenting, tinkering, and
-        connecting ideas across disciplines.
+        Curiosity fuels everything I build. These pursuits keep me
+        experimenting, tinkering, and connecting ideas across disciplines.
       </p>
     </div>
     <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -95,8 +113,12 @@ const Hobbies = () => (
               {hobby.icon}
             </span>
             <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">{hobby.pillar}</p>
-              <h3 className="text-lg font-semibold text-neutral-50">{hobby.title}</h3>
+              <p className="text-xs uppercase tracking-[0.4em] text-neutral-500">
+                {hobby.pillar}
+              </p>
+              <h3 className="text-lg font-semibold text-neutral-50">
+                {hobby.title}
+              </h3>
             </div>
           </div>
           <p className="mt-4 text-sm text-neutral-300">{hobby.description}</p>

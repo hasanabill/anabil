@@ -73,7 +73,7 @@ const Hero = () => {
         >
           Alhamdulillah, Allah has blessed me with the skills to craft modern,
           impactful digital solutions. I build full-stack applications, explore
-          AI & IoT, and strive to use technology for positive change.
+          AI & IoT, and strive to use technology to benefit the ummah.
         </motion.p>
 
         {/* Action buttons */}

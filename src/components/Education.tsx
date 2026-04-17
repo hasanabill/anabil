@@ -25,10 +25,10 @@ const Education = () => (
 
       <div className="mt-3 flex flex-wrap gap-4 text-sm text-neutral-300">
         <span className="px-3 py-1 rounded-full bg-neutral-800/60 border border-neutral-700">
-          8th Semester (CGPA: <span className="text-sky-300">3.73</span>)
+          9th Semester (CGPA: <span className="text-sky-300">3.80</span>)
         </span>
         <span className="px-3 py-1 rounded-full bg-neutral-800/60 border border-neutral-700">
-          Expected Graduation: April 2026
+          Expected Graduation: May 2026
         </span>
       </div>
     </div>
